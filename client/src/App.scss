@@ -1,38 +1,52 @@
+* {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  color-scheme: dark;
+}
+
 body {
-  font-family: "Muli", sans-serif;
-  font-weight: 300;
-  background-color: #e2e8f0;
+  font-family: "Muli", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 500;
+  color: #e5e5e5;
+  background-color: #07090b;
   padding: 40px;
 }
 
 label {
   display: flex;
   flex-direction: column;
-  letter-spacing: 0.05rem;
-  font-size: .8em;
-  font-weight: 400;
-  color: #222;
+  font-size: 15px;
 }
 
 .app {
   display: flex;
-  max-width: 1400px;
-  flex-wrap: wrap;
-  gap: 12px;
+  flex-flow: row wrap;
+  max-width: 1140px;
+  gap: 16px;
   margin: 0 auto;
 }
 
 .container {
   flex-grow: 1;
-  margin: 0 20px;
-  background-color: #fff;
-  border: 1px solid #cbd5e0;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  border-radius: 0.375rem;
-  padding: 40px;
+  border: 1px solid #232427;
+  border-radius: 12px;
+  padding: 16px 30px;
+  min-width: 320px;
+  height: fit-content;
 
   label {
     margin: 10px 0;
+    color: #d9dadc;
+  }
+
+  small {
+    margin-block-start: 13px;
+    font-size: 13px;
   }
 
   .button {
@@ -41,26 +55,36 @@ label {
 }
 
 input {
-  padding: 10px 0;
-  border-radius: 0.125rem;
-  border: 1px solid rgb(226, 232, 240);
-  background-color: #fdfdfe;
-  padding-inline-start: 0.75rem;
-  font-size: 0.875rem;
+  padding: 15px 17px;
+  border-radius: 11px;
+  border: 1px solid #232427;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 600;
+  outline: none;
+  margin-block-start: 9px;
+
+  &:focus {
+    outline: 2px solid #292a2c;
+  }
 }
 
 .button {
-  background-color: #319795;
-  border-radius: 0.125rem;
-  padding: 10px 20px;
-  color: white;
-  display: inline-flex;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 400;
-  font-size: .9em;
+  background-color: #e5e5e5;
+  border-radius: 11px;
+  padding: 13px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  color: #181a1b;
+  transition: 150ms opacity ease-out;
+
   &:hover {
     cursor: pointer;
+    opacity: 0.85;
   }
 }
 
@@ -69,14 +93,13 @@ input {
   flex-direction: column;
 
   .balance {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 400;
-    font-size: .9em;
-    display: inline-flex;
+    font-weight: 600;
+    display: flex;
     margin-top: 10px;
-    padding: 0.75rem;
-    background-color: #f4f6f8;
+    padding: 20px 26px;
+    background-color: #23242720;
+    border: 1px solid #232427;
+    border-radius: 11px;
   }
 }
 
